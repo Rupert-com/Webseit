@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+$white: #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black: #000 !default;
+
+$font-family-sans-serif:      'Quicksand', sans-serif;
+$font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-base:            $font-family-sans-serif !default;
+
+$theme-colors: (
+  "menu": #990099,
+  "light": #ffffffff,
+  "dark": #000000ff,
+  "mint": #adefd1ff,
+  "sailor": #00203fff,
+  "red": #d72631,
+  "jade": #077b8a,
+  "tailor": #5c3c92,
+);
+
+$navbar-dark-color: map-get($theme-colors, "light");
+$navbar-dark-hover-color: map-get($theme-colors, "mint");
+$body-bg: map-get($theme-colors, "mint");
+$body-color: $gray-800;
+
+//    color: $navbar-light-brand-color;
+
+//@include hover-focus() {
+//color: $navbar-light-brand-hover-color;
+
+@import "~bootstrap/scss/bootstrap";
+
+.border-lg {
+  border-width: 2px !important;
+}
+
+.border-xl {
+  border-width: 3px !important;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+  color: $navbar-dark-hover-color;
+}
+@media only screen and (min-width: 960px) {
+  .navbar .navbar-nav .nav-link {
+    padding: 1em 0.7em;
+  }
+  .navbar {
+    padding: 0;
+  }
+  .navbar .navbar-brand {
+    padding: 0 0.7em;
+  }
+}
+.navbar .navbar-nav .nav-link {
+  position: relative;
+}
+.navbar .navbar-nav .nav-link::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: 0;
+  background-color: $navbar-dark-hover-color;
+  color: transparent;
+  width: 0;
+  content: "";
+  height: 0;
+  transition: all 0.4s;
+}
+.navbar .navbar-nav .nav-link:hover::after {
+  width: 100%;
+  height: .3rem;
+}
