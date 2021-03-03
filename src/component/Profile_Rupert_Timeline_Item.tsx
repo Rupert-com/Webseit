@@ -66,7 +66,7 @@ export class Profile_Rupert_Timeline_Item extends Component<IProfile_Rupert_Time
           }
         </TimelineSeparator>
         <TimelineContent>
-          <Paper elevation={1} style={{ padding: '6px 16px' }}>
+          <Paper elevation={0} style={{ padding: '6px 16px' }} className="border-bottom border-tailor">
             <Typography variant="h6" component="h1">
               {this.state.headline}
             </Typography>
