@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400&display=swap");
 
 $white: #fff !default;
 $gray-100: #f8f9fa !default;
@@ -12,33 +12,82 @@ $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
 $black: #000 !default;
 
-$font-family-sans-serif:      'Quicksand', sans-serif;
-$font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
-$font-family-base:            $font-family-sans-serif !default;
+$font-family-sans-serif: "Quicksand", sans-serif;
+$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-base: $font-family-sans-serif !default;
 
 $theme-colors: (
   "menu": #990099,
-  "light": #ffffffff,
-  "dark": #000000ff,
   "mint": #adefd1ff,
   "sailor": #00203fff,
   "red": #d72631,
   "jade": #077b8a,
   "tailor": #5c3c92,
+  "100": $gray-100,
+  "200": $gray-200,
+  "300": $gray-300,
+  "400": $gray-400,
+  "500": $gray-500,
+  "600": $gray-600,
+  "700": $gray-700,
+  "800": $gray-800,
+  "900": $gray-900,
 );
 
-$navbar-dark-color: map-get($theme-colors, "light");
-$navbar-dark-hover-color: map-get($theme-colors, "mint");
-$body-bg: map-get($theme-colors, "mint");
-$body-color: $gray-800;
+$enable-shadows: true;
+$box-shadow-sm: 0.125rem 0.125rem 0.25rem rgba($black, 0.75);
+$box-shadow: 0.5rem 0.5rem 1rem rgba($black, 0.65);
+$box-shadow-lg: 1rem 1rem 3rem rgba($black, 0.175);
 
-//    color: $navbar-light-brand-color;
+//
+$navbar-dark-color: $white;
+$navbar-dark-hover-color: $black;
+
+$body-bg: $gray-600;
+$body-color: $gray-900;
+
+// Cards
+$card-cap-bg: $gray-800;
+$card-cap-color: $gray-100;
+$card-border-width: 0;
+$card-border-radius: 0.1rem;
 
 //@include hover-focus() {
 //color: $navbar-light-brand-hover-color;
 
 @import "~bootstrap/scss/bootstrap";
 
+// Custom
+.Banner {
+  // top: 60%;
+  z-index: 1030;
+  opacity: 0.7;
+  margin-top: 23%;
+  // min-height: 100%;
+  // padding-top: calc(100 * 100% / 100vw);
+}
+.BannerContent {
+  padding: 2rem;
+}
+.h-2 {
+  height: 1.3rem !important;
+}
+.YTiframeContainer {
+  padding-bottom: 56.25%;
+  height: 0;
+  position: relative;
+}
+.YTiframe {
+  z-index: -100;
+  top: -4%;
+  left: 0;
+  border: 0;
+}
+.YTiframeOverlay {
+  z-index: 1020;
+  top: -4vh;
+  left: 0;
+}
 .border-lg {
   border-width: 2px !important;
 }
@@ -49,6 +98,7 @@ $body-color: $gray-800;
 
 .navbar .navbar-nav .nav-link:hover {
   color: $navbar-dark-hover-color;
+  font-weight: $font-weight-bold;
 }
 @media only screen and (min-width: 960px) {
   .navbar .navbar-nav .nav-link {
@@ -63,6 +113,7 @@ $body-color: $gray-800;
 }
 .navbar .navbar-nav .nav-link {
   position: relative;
+  // font-weight: $font-weight-light;
 }
 .navbar .navbar-nav .nav-link::after {
   position: absolute;
@@ -80,5 +131,5 @@ $body-color: $gray-800;
 }
 .navbar .navbar-nav .nav-link:hover::after {
   width: 100%;
-  height: .3rem;
+  height: 0.3rem;
 }

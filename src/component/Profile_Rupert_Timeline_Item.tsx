@@ -58,7 +58,7 @@ export class Profile_Rupert_Timeline_Item extends Component<IProfile_Rupert_Time
           </Typography>
         </TimelineOppositeContent>
         <TimelineSeparator>
-          <TimelineDot color={this.state.color}>
+          <TimelineDot color={this.state.color} className="rounded">
             {this.state.icon}
           </TimelineDot>
           {(!this.props.lastitem) &&
@@ -66,7 +66,7 @@ export class Profile_Rupert_Timeline_Item extends Component<IProfile_Rupert_Time
           }
         </TimelineSeparator>
         <TimelineContent>
-          <Paper elevation={0} style={{ padding: '6px 16px' }} className="border-bottom border-tailor">
+          <Paper elevation={1} style={{ padding: '6px 16px' }} className="rounded border-bottom border-tailor">
             <Typography variant="h6" component="h1">
               {this.state.headline}
             </Typography>
