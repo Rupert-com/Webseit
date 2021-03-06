@@ -1,16 +1,6 @@
-  webpack.config.js
-
-  ``` bash
-  // const isEnvDevelopment = webpackEnv === 'development';
-  // const isEnvProduction = webpackEnv === 'production';
-
-  const isEnvDevelopment = true;
-  const isEnvProduction = false;
-  ```
-
   Run
   ``` bash
-  sudo apt install xsel && npm install && npm run build
-  npm install -g serve
-  serve -s build
+npm install && npm run build
+//  npm install -g serve <--- If you do not have a apache webserver
+//  serve -s build
   ```
