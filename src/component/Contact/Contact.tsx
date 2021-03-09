@@ -1,5 +1,5 @@
-import React, { Component, MouseEvent } from 'react';
-import { Form, Row, Col, Button, Container, Jumbotron } from "react-bootstrap";
+import { Component } from 'react';
+import { Container, Jumbotron } from "react-bootstrap";
 import { Contact_Form as CTForm } from "./Contact_Form";
 interface IContact {
 

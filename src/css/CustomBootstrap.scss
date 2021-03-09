@@ -12,12 +12,26 @@ $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
 $black: #000 !default;
 
-$font-family-sans-serif: "Quicksand", sans-serif;
-$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-sans-serif: "Quicksand",
+sans-serif;
+$font-family-monospace: SFMono-Regular,
+Menlo,
+Monaco,
+Consolas,
+"Liberation Mono",
+"Courier New",
+monospace !default;
 $font-family-base: $font-family-sans-serif !default;
 
-$theme-colors: (
-  "menu": #990099,
+$container-max-widths: (sm: 540px,
+  md: 720px,
+  lg: 1140px,
+  xl: 1500px) !default;
+
+// disable grid padding
+$grid-gutter-width: 0;
+
+$theme-colors: ("menu": #990099,
   "mint": #adefd1ff,
   "sailor": #00203fff,
   "red": #d72631,
@@ -59,36 +73,47 @@ $card-border-radius: 0.1rem;
 
 // Custom
 .Banner {
-  // top: 60%;
-  z-index: 1030;
+  margin-top: 56.25%;
+  width: 100%;
   opacity: 0.84;
-  margin-top: 50%;
-  // min-height: 100%;
-  // padding-top: calc(100 * 100% / 100vw);
+  //   // margin-top: 50%;
+  //   // min-height: 100%;
+  //   // padding-top: calc(100 * 100% / 100vw);
 }
-.BannerContent {
-  padding: 2rem;
-}
+
+// .BannerContent {
+//   padding: 2rem;
+// }
+
 .h-2 {
   height: 1.3rem !important;
 }
+
+.YTiframe {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .YTiframeContainer {
   padding-bottom: 56.25%;
+  /* 16:9 */
   height: 0;
-  position: relative;
-  z-index: -1;
 }
-.YTiframe {
-  z-index: -100;
-  top: -13%;
-  left: 0;
-  border: 0;
-}
-.YTiframeOverlay {
-  z-index: 1020;
-  top: -4vh;
-  left: 0;
-}
+
+// .YTiframe {
+//   z-index: -100;
+//   top: -13%;
+//   left: 0;
+//   border: 0;
+// }
+
+// .YTiframeOverlay {
+//   top: -4vh;
+//   left: 0;
+// }
+
 .border-lg {
   border-width: 2px !important;
 }
@@ -101,21 +126,26 @@ $card-border-radius: 0.1rem;
   color: $navbar-dark-hover-color;
   font-weight: $font-weight-bold;
 }
+
 @media only screen and (min-width: 960px) {
   .navbar .navbar-nav .nav-link {
     padding: 1em 0.7em;
   }
+
   .navbar {
     padding: 0;
   }
+
   .navbar .navbar-brand {
     padding: 0 0.7em;
   }
 }
+
 .navbar .navbar-nav .nav-link {
   position: relative;
   // font-weight: $font-weight-light;
 }
+
 .navbar .navbar-nav .nav-link::after {
   position: absolute;
   bottom: 0;
@@ -130,7 +160,13 @@ $card-border-radius: 0.1rem;
   height: 0;
   transition: all 0.4s;
 }
+
 .navbar .navbar-nav .nav-link:hover::after {
   width: 100%;
   height: 0.3rem;
+}
+
+// Makes SVG-Objects clickable
+object {
+  pointer-events: none;
 }
