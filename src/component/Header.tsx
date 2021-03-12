@@ -1,7 +1,7 @@
 import { Navbar, Nav, Card } from "react-bootstrap";
 import { FILE_Rupert as Rupert } from "./../assets/images/index";
 
-function Header() {
+export default function Header() {
   return (
     <Navbar
       style={{ minHeight: "78px" }}
@@ -26,6 +26,8 @@ function Header() {
       </Card>
       <Navbar.Collapse className="justify-content-end">
         <Nav className="mr-sm-2">
+          <Nav.Link href="./resources">Resources</Nav.Link>
+          <Nav.Link href="./">Home</Nav.Link>
           <Nav.Link href="./">Home</Nav.Link>
           <Nav.Link href="./contact">Kontakt</Nav.Link>
         </Nav>
@@ -34,4 +36,4 @@ function Header() {
   );
 }
 
-export default Header;
+

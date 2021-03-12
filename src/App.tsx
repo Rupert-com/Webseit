@@ -1,15 +1,15 @@
-import { Component } from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import "./css/CustomBootstrap.scss";
 import "./css/App.css";
-import Header from "./component/Header";
-import { Profile_Rupert as PRupert } from "./component/Profile/Profile_Rupert";
+import "./css/CustomBootstrap.scss";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Component } from "react";
 import { Contact as PContact } from "./component/Contact/Contact";
-import Home from "./component/Home";
 import { Container, Row, Col } from "react-bootstrap";
-import { ListItem, ListItemText, List, ListItemIcon } from "@material-ui/core";
-import { SVG_HTML as HTML } from "./assets/images/index";
 import { getSvgIconMaterial as GetIcon } from "./BaseJSX";
+import { ListItem, ListItemText, List, ListItemIcon } from "@material-ui/core";
+import { Profile_Rupert as PRupert } from "./component/Profile/Profile_Rupert";
+import { SVG_HTML as HTML } from "./assets/images/index";
+import Header from "./component/Header";
+import Home from "./component/Home";
 
 interface IAppState {}
 
@@ -50,7 +50,7 @@ export default class App extends Component<IAppState, IAppState_State> {
                   <Home />
                 </Col>
                 <Col md="3" className="bg-light">
-                  <div style={{ textAlign: "end" }}>
+                  <div style={{ textAlign: "center" }}>
                     <h3>Quicklinks</h3>
                     <hr className="bg-tailor" />
                     <List>
